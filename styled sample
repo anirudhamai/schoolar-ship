@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <style>
-.item{
+.items {
   display: none;
 }
 
