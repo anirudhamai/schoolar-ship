@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: auto;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 16px 16px;
+  background-color: #b6b6b6;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: rgb(22, 105, 214);
+  color: white;
+}
+
+.dropbtn {
+  background-color: #1a1919;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #515c68;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute ;
+  width: auto;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+
+
+.scho{
+    display: flex;  
+    border: solid 1.5px gray;
+    border-radius: 10px;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow: hidden;
+    min-height: fit-content;
+    max-height: 350px;
+    max-width: 100%;
+    min-width: fit-content;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.835);
+    transition: transform .2s;  
+}
+.scho:hover {
+    padding: auto;
+    transform: scale(1.02);
+  }
+
+.scho h3{
+    padding-top: 20px;    
+    padding: 25px;
+    font-weight: bold;
+    color: #4c3f91;
+    background-color: #bbbbbb;
+    margin: auto;
+    font-family: "Kanit", sans-serif;
+    width: 100%;
+    font-size: 45px;
+    font-size: justify;
+    text-decoration: underline;
+    text-align: left;
+}
+.align{
+    padding: 7px 0px 7px 5px;
+    width: 100%;
+    background-color: rgba(53, 53, 50, 0.692);
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    left: 5px;
+}
+.col1{
+    display: flex;
+    left: 0;
+    flex-direction: row;
+    background-color: rgb(143, 187, 177);
+    width: 100%;
+    font-size: 200%;
+    border: none;
+    padding: none;
+}
+.bttn2 {
+    background-color: bisque;
+    border-color: azure;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 38%;
+    width: 24%;
+    cursor: pointer;
+    height: 40px;
+    font-size: 150%;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    transition: transform .2s;  
+    border: 2px solid black;
+    border-radius: 30px;
+  }
+.bttn2:hover {
+    background: #4c3f91;
+    color: white;
+    transform: scale(1.15);
+  }
+</style>
+<body>
+
+<h2>Finding your scholarships</h2>
+
+
+  <button onclick="myFunction()" class="dropbtn">Select class</button>
+  <div id="myDropdown" class="dropdown-content">
+    <span><button class="btn active" onclick="filterSelection('all')"> Show all</button></span><br>
+    <span><button class="btn" onclick="filterSelection('puc')">pu</button></span><br>
+    <button class="btn" onclick="filterSelection('engineering')"> Engineering</button><br>
+    <button class="btn" onclick="filterSelection('Bcom')"> b.com</button><br>
+    <button class="btn" onclick="filterSelection('SSLC')"> 10th</button><br>
+</div>
+
+<div class="container">
+  <div class="items puc">
+    <div class="scho" >
+      <h3>PUC Scholorship</h3>
+      <span class="align">
+        <span class="data">
+          <span class="col1">Award : 35,000</span>
+          <span class="col1">Eligiblity : Engineering students</span>
+        </span>
+        <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+      </span>
+    </div>
+  </div>
+
+
+  <div class="items SSLC Bcom">
+    <div class="scho" >
+        <h3>sslc_bcom Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity : sslc_bcom students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items puc">
+    <div class="scho" >
+        <h3>puc Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity : puc students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items SSLC">
+    <div class="scho" >
+        <h3>sslc Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity : sslc students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items puc engineering">
+    <div class="scho" >
+        <h3>puc_engineering Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity : puc_engineering students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items SSLC">
+    <div class="scho" >
+        <h3>sslc Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity : sslc students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items engineering">
+    <div class="scho" >
+        <h3>enggineering Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity : enggineering students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items engineering">
+    <div class="scho" >
+        <h3>enggineering Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity : enggineering students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items Bcom">
+    <div class="scho" >
+        <h3>bcom Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity : bcom students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items Bcom engineering">
+    <div class="scho" >
+        <h3>bcom_engineering Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity : bcom_engineering students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items Bcom">
+    <div class="scho" >
+        <h3>bcom Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity :bcom students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items Bcom">
+    <div class="scho" >
+        <h3>bcom Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity :bcom students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+  <div class="items engineering">
+    <div class="scho" >
+        <h3>engineering Scholorship</h3>
+        <span class="align">
+          <span class="data">
+            <span class="col1">Award : 35,000</span>
+            <span class="col1">Eligiblity : engineering students</span>
+          </span>
+          <span class="apply"><a href="login.html"><button type="button" class="bttn2">View & Apply</button></a></span>
+        </span>
+      </div>
+  </div>
+</div>
+
+
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+
+
+
+
+<script>
+filterSelection("all");
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("items");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myDropdown");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
